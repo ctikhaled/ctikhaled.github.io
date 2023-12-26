@@ -1,13 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html dir="rtl">
     <header>
+        <meta charset="UTF-8">
         <title>
-            My Page 1
+            مثال Node.js
         </title>
     </header>
     <body>
         <h1>
-            Title
+            ارسال طلب الى الخادم
         </h1>
+        <button onclick="sendRequest()">ارسال</button>
+        <script>
+            function sendRequest(){
+                fetch('/api')
+                .then(response => response.text())
+                .then(data => alert("Done"))
+            }
+        </script>
     </body>
 </html>
